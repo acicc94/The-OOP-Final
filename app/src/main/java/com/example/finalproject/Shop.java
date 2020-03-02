@@ -1,17 +1,32 @@
 package com.example.finalproject;
 
+import android.view.View;
+import android.widget.TextView;
+
+import java.util.Random;
+
 public class Shop {
+    public TextView shopEvent;
+
     public int gold;
 
     private int attack;
 
     private int defense;
 
-    private void shopTalk(){
+    private Random cost = new Random();
 
+
+
+    private void shopTalk(View v){
+        if (shopEvent.getText()=="you are greeted by a woman behind a oak wood counter."){
+            shopEvent.setText("she asks you to hurry up and buy something");
+        }
     }
 
     private void upgradeWeapon(){
+        attack=attack+1;
+        gold=gold-cost.nextInt(990)+10;
 
     }
 
@@ -49,6 +64,14 @@ public class Shop {
 
     public void setDefense(int defense) {
         this.defense = defense;
+    }
+
+    public TextView getShopEvent() {
+        return shopEvent;
+    }
+
+    public void setShopEvent(TextView shopEvent) {
+        this.shopEvent = shopEvent;
     }
 
     @Override
