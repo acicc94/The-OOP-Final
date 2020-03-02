@@ -3,9 +3,11 @@ package com.example.finalproject;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.Random;
 
-public class Shop {
+public class Shop extends AppCompatActivity{
     public TextView shopEvent;
 
     public int gold;
