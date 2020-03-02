@@ -26,4 +26,37 @@ public class Shop {
     private void goldCheck(){
 
     }
+
+    public int getGold() {
+        return gold;
+    }
+
+    public void setGold(int gold) {
+        this.gold = gold;
+    }
+
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
+    public int getDefense() {
+        return defense;
+    }
+
+    public void setDefense(int defense) {
+        this.defense = defense;
+    }
+
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "Player's gold is now : " + gold +
+                "\nPlayer's attack is now : " + attack +
+                "\nPlayer's defense is now : " + defense +
+                '}';
+    }
 }
