@@ -54,12 +54,15 @@ public class Stats {
 
     public void addHealth(){
         setHealth(getHealth() + 10);
+        AvailablePoint --;
     }
     public void addAttack(){
     setAttack(getAttack()+ 10);
+    AvailablePoint--;
     }
     public void addSpeed(){
         setSpeed(getSpeed() + 5);
+        AvailablePoint--;
     }
 
     public void pointCheck(){
