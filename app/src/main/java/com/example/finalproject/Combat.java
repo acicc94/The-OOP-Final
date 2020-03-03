@@ -12,22 +12,22 @@ public class Combat extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.combat);
     }
-    private void run(){
+    public void run(){
 
     }
-    private void attack(){
+    public void attack(){
 
     }
-    private void speedCheck(){
+    public void speedCheck(){
 
     }
-    private void xpCheck(){
+    public void xpCheck(){
 
     }
-    private void winCheck(){
+    public void winCheck(){
 
     }
-    private void deadCheck(){
+    public void deadCheck(){
 
     }
 
