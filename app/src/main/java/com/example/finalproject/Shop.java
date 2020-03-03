@@ -18,8 +18,6 @@ public class Shop extends AppCompatActivity{
 
     private Random cost = new Random();
 
-
-
     private void shopTalk(View v){
         if (shopEvent.getText()=="you are greeted by a woman behind a oak wood counter."){
             shopEvent.setText("she asks you to hurry up and buy something");
@@ -29,7 +27,6 @@ public class Shop extends AppCompatActivity{
     private void upgradeWeapon(){
         attack=attack+1;
         gold=gold-cost.nextInt(990)+10;
-
     }
 
     private void upgradeArmor(){
