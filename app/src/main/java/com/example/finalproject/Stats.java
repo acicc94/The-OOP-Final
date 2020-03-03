@@ -3,13 +3,16 @@ package com.example.finalproject;
 public class Stats {
     protected int health;
     protected int speed;
+    protected int attack;
     private int AvailablePoint;
 
-    public Stats(int health, int speed, int availablePoint) {
+    public Stats(int health, int speed, int attack, int availablePoint) {
         setHealth(health);
         setSpeed(speed);
-        setAvailablePoint(availablePoint);
+        setAttack(attack);
+        AvailablePoint = availablePoint;
     }
+
 
     public int getHealth() {
         return health;
@@ -33,6 +36,14 @@ public class Stats {
         this.speed = speed;
     }
 
+    public int getAttack() {
+        return attack;
+    }
+
+    public void setAttack(int attack) {
+        this.attack = attack;
+    }
+
     public int getAvailablePoint() {
         return AvailablePoint;
     }
@@ -40,4 +51,15 @@ public class Stats {
     public void setAvailablePoint(int availablePoint) {
         AvailablePoint = availablePoint;
     }
+
+    public void addHealth(){
+        setHealth(getHealth() + 10);
+    }
+    public void addAttack(){
+    setAttack(getAttack()+ 10);
+    }
+    public void addSpeed(){
+        setSpeed(getSpeed() + 5);
+    }
+
 }
