@@ -10,7 +10,7 @@ public class Stats {
         setHealth(health);
         setSpeed(speed);
         setAttack(attack);
-        AvailablePoint = availablePoint;
+        setAvailablePoint(availablePoint);
     }
 
 
@@ -60,6 +60,14 @@ public class Stats {
     }
     public void addSpeed(){
         setSpeed(getSpeed() + 5);
+    }
+
+    public void pointCheck(){
+
+    }
+
+    public void continues(){
+        //TODO
     }
 
 }
