@@ -13,9 +13,11 @@ public class Enemy extends Stats {
 
     Random numOfEnemy = new Random();
 
-    public Enemy(int health, int speed, int availablePoint, int newEnemy) {
-        super(health, speed, availablePoint);
+    public Enemy(int health, int speed, int attack, int availablePoint, List<String> enemyNames, int newEnemy, Random numOfEnemy) {
+        super(health, speed, attack, availablePoint);
+        this.enemyNames = enemyNames;
         this.newEnemy = newEnemy;
+        this.numOfEnemy = numOfEnemy;
     }
 
     private int genNumOfEnemy(int loop){
