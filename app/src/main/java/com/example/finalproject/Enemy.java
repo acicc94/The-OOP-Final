@@ -15,22 +15,11 @@ public class Enemy extends Stats {
 
     public Enemy(int health, int speed, int attack, int availablePoint, List<String> enemyNames, int newEnemy, Random numOfEnemy) {
         super(health, speed, attack, availablePoint);
-        this.enemyNames = enemyNames;
-        this.newEnemy = newEnemy;
-        this.numOfEnemy = numOfEnemy;
+        setEnemyNames(enemyNames);
+        setNewEnemy(newEnemy);
+        setNumOfEnemy(numOfEnemy);
     }
 
-    private int genNumOfEnemy(int loop){
-        int x1 = numOfEnemy.nextInt(4)+1;
-        for(int i = 0; i < loop; i++){
-            if(x1==1){
-                newEnemy();
-            }
-
-        }
-
-        return x1;
-    }
 
     public List<String> getEnemyNames() {
         return enemyNames;
