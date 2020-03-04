@@ -9,7 +9,6 @@ public class Enemy extends Stats {
         super(health, speed, attack, availablePoint);
     }
 
-
     public String Newenemy() {
         int newenemy = random.nextInt(4);
         if (newenemy == 0) {
