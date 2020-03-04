@@ -1,5 +1,6 @@
 package com.example.finalproject;
 
+import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
@@ -8,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 
 public class Shop extends AppCompatActivity{
-    public TextView shopEvent;
+    private TextView shopEvent;
 
     public int gold;
 
@@ -18,7 +19,14 @@ public class Shop extends AppCompatActivity{
 
     private Random cost = new Random();
 
-    private void shopTalk(View v){
+    @Override
+    protected void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.outside);
+        shopEvent =findViewById(R.id.showevent);
+    }
+
+    public void shopTalk(View v){
         if (shopEvent.getText()=="you are greeted by a woman behind a oak wood counter."){
             shopEvent.setText("she asks you to hurry up and buy something");
         }
@@ -33,7 +41,7 @@ public class Shop extends AppCompatActivity{
 
     }
 
-    private void leaveShop(){
+    private void onLeaveShopClick(View v){
 
     }
 
