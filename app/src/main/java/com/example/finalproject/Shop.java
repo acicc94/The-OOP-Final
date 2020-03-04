@@ -11,11 +11,7 @@ import java.util.Random;
 public class Shop extends AppCompatActivity{
     private TextView shopEvent;
 
-    public int gold;
-
-    private int attack;
-
-    private int defense;
+    public int gold,attack,defense;
 
     private Random cost = new Random();
 
