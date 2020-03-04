@@ -11,7 +11,7 @@ public class Enemy extends Stats {
 
     Random stats = new Random();
 
-    public Enemy(int health, int speed, int attack, int availablePoint, List<String> enemyNames, int newEnemy, Random numOfEnemy) {
+    public Enemy(int health, int speed, int attack, int availablePoint, List<String> enemyNames) {
         super(health, speed, attack, availablePoint);
         setEnemyNames(enemyNames);
     }
