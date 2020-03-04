@@ -14,7 +14,7 @@ public class Combat extends AppCompatActivity{
     private TextView playerHealth,EnemyHp,log;
     Random random=new Random();
     private final int TEN=10;
-//    private Enemy newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
+    private Stats newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
