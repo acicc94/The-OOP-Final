@@ -9,6 +9,8 @@ public class Enemy extends Stats {
 
     List<String> enemyNames = Arrays.asList("Slime", "Skeleton", "Zombie");
 
+    Random stats = new Random();
+
     public Enemy(int health, int speed, int attack, int availablePoint, List<String> enemyNames, int newEnemy, Random numOfEnemy) {
         super(health, speed, attack, availablePoint);
         setEnemyNames(enemyNames);
@@ -22,5 +24,4 @@ public class Enemy extends Stats {
     public void setEnemyNames(List<String> enemyNames) {
         this.enemyNames = enemyNames;
     }
-
 }
