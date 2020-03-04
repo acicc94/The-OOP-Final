@@ -3,18 +3,18 @@ package com.example.finalproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Random;
 
 
 public class Combat extends AppCompatActivity{
     private TextView playerHealth,EnemyHp,log;
+//    Enemy newenemy=new Enemy();
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.combat);
+
         playerHealth=findViewById(R.id.playerhp);
         EnemyHp=findViewById(R.id.Enemyhp);
         log=findViewById(R.id.log);
