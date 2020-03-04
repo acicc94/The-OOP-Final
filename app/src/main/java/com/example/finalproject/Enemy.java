@@ -7,21 +7,25 @@ import java.util.Random;
 
 public class Enemy extends Stats {
 
-    List<String> enemyNames = Arrays.asList("Slime", "Skeleton", "Zombie");
-
     Random stats = new Random();
 
-    public Enemy(int health, int speed, int attack, int availablePoint, List<String> enemyNames) {
+    public Enemy(int health, int speed, int attack, int availablePoint) {
         super(health, speed, attack, availablePoint);
-        setEnemyNames(enemyNames);
     }
-
-
-    public List<String> getEnemyNames() {
-        return enemyNames;
-    }
-
-    public void setEnemyNames(List<String> enemyNames) {
-        this.enemyNames = enemyNames;
+    Random random=new Random();
+    public String Newenemy() {
+        int newenemy = random.nextInt(4);
+        if (newenemy == 0) {
+            return "goblin";
+        }
+        else if (newenemy==1){
+            return "wolf";
+        }
+        else if (newenemy==2){
+            return "skeleton";
+        }
+        else{
+            return "slime";
+        }
     }
 }

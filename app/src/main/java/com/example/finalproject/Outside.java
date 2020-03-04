@@ -5,11 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class Outside extends AppCompatActivity{
     private TextView showevent;
     Random random=new Random();
+    private Enemy newEnemy=new Enemy(random.nextInt(),random.nextInt(),random.nextInt(),random.nextInt());
+    public String enemyName=newEnemy.Newenemy();
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -21,7 +25,7 @@ public class Outside extends AppCompatActivity{
         String event;
         if (eventNum==0){
             //TODO replace " enemies" bellow with name of enemy
-            event="you found "+nomOfEnemies+" enemies";
+            event="you found "+nomOfEnemies+enemyName;
             showevent.setText(event);
         }else {
             event="nothing happened";

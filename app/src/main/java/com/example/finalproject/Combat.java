@@ -9,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Combat extends AppCompatActivity{
     private TextView playerHealth,EnemyHp,log;
-//    Enemy newenemy=new Enemy();
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
