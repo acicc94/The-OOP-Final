@@ -5,10 +5,16 @@ import android.os.Bundle;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Random;
+
+import static com.example.finalproject.Player.level;
 
 
 public class Combat extends AppCompatActivity{
     private TextView playerHealth,EnemyHp,log;
+    Random random=new Random();
+    private final int TEN=10;
+//    private Enemy newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);

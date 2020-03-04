@@ -2,14 +2,9 @@ package com.example.finalproject;
 
 import java.util.Random;
 
-public class Enemy extends Stats {
+public class Enemy{
     Random random=new Random();
-
-    public Enemy(int health, int speed, int attack, int availablePoint) {
-        super(health, speed, attack, availablePoint);
-    }
-
-    public String Newenemy() {
+    public String NewEnemy() {
         int newenemy = random.nextInt(4);
         if (newenemy == 0) {
             return "goblin";
