@@ -45,9 +45,4 @@ public class Enemy extends Stats {
         this.numOfEnemy = numOfEnemy;
     }
 
-    public void newEnemy(){
-        String enemy = enemyNames.get(numOfEnemy.nextInt(enemyNames.size()));
-    }
-
-
 }
