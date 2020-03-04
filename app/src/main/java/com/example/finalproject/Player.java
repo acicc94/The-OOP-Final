@@ -2,6 +2,7 @@ package com.example.finalproject;
 
 public class Player extends Stats{
     private String name;
+    private static int level = 1;
 
     public Player(int health, int speed, int attack, int availablePoint, String name) {
         super(health, speed, attack, availablePoint);
