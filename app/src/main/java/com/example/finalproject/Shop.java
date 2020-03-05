@@ -29,12 +29,12 @@ public class Shop extends AppCompatActivity{
         }
     }
 
-    private void upgradeWeapon(){
+    public void upgradeWeapon(View v){
         attack=attack+1;
         gold=gold-cost.nextInt(990)+10;
     }
 
-    private void upgradeArmor(){
+    public void upgradeArmor(View v){
 
         gold=gold-cost.nextInt(990)+10;
     }
