@@ -22,6 +22,7 @@
         android:id="@+id/Speedadd"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:onClick="onAddSpeedClick"
         android:text="+1 speed"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -43,6 +44,7 @@
         android:id="@+id/Attackadd"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:onClick="onAddStrengthClick"
         android:text=" +1 strength"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,20 +87,12 @@
         android:id="@+id/HPadd"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:onClick="onAddHealthClick"
         android:text="+10 health"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/half"
         app:layout_constraintTop_toBottomOf="@+id/points" />
-
-    <Button
-        android:id="@+id/Done"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Done"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Speed" />
 
     <TextView
         android:id="@+id/text"
@@ -107,12 +101,13 @@
         app:layout_constraintBottom_toTopOf="@+id/Continue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Done" />
+        app:layout_constraintTop_toBottomOf="@+id/Speedadd" />
 
     <Button
         android:id="@+id/Continue"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:onClick="onContinueClick"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,7 +127,6 @@
         android:id="@+id/half"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/Done"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name" />

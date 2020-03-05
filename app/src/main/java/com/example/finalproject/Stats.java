@@ -14,7 +14,7 @@ public class Stats {
     }
 
 
-    public int getHealth() {
+    public  int getHealth() {
         return health;
     }
 
@@ -52,25 +52,5 @@ public class Stats {
         AvailablePoint = availablePoint;
     }
 
-    public void addHealth(){
-        setHealth(getHealth() + 10);
-        AvailablePoint --;
-    }
-    public void addAttack(){
-    setAttack(getAttack()+ 10);
-    AvailablePoint--;
-    }
-    public void addSpeed(){
-        setSpeed(getSpeed() + 5);
-        AvailablePoint--;
-    }
-
-    public void pointCheck(){
-
-    }
-
-    public void continues(){
-        //TODO
-    }
 
 }
