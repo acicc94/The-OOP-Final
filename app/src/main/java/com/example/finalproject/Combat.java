@@ -36,10 +36,11 @@ public class Combat extends AppCompatActivity{
     }
     public void speedCheck(){
         int PSC=random.nextInt(player.getSpeed())+1,ESC=newEnemy.getSpeed()+1;
+//        PSC=player speed Check ESC=enemy speed check
         int playerDamage=player.getAttack(),enemyDamage=newEnemy.getAttack();
 //        if (PSC==player.getSpeed()){
-//            PSC=player.getSpeed()*2;
-//        }what you think?
+//            PSC*=2;
+//        }what you think? if PSC=player speed PSC*2
         if (PSC>ESC){
             newEnemy.setHealth(newEnemy.getHealth()-playerDamage);
         }else if (PSC<ESC){
