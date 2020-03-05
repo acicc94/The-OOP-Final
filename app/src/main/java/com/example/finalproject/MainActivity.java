@@ -10,10 +10,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtName, txtPoints, txtXp, txtHealth,txtAttack,txtSpeed;
+    int hp = 10, speed = 5,attack = 5,points = 100;
     private Button buttonHp,buttonAtk,buttonSp;
-    private Stats stats=new Stats(Integer.parseInt(txtHealth.toString()),
-            Integer.parseInt(txtSpeed.toString()), Integer.parseInt(txtAttack.toString()),
-            Integer.parseInt(txtPoints.toString()));
+    private Stats stats=new Stats(hp, speed, attack, points);
 
 
     @Override
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAtk = findViewById(R.id.Attackadd);
         buttonSp = findViewById(R.id.Speedadd);
 
+
     }
     public void onAddHealthClick(View v){
         addHealth();
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         canUpgrade();
     }
     public void onContinueClick(View v){
-        Intent intent = new Intent(this, InTown.class);
+    Intent intent = new Intent(this, InTown.class);
         startActivity(intent);
     }
 
