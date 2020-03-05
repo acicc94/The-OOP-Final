@@ -32,6 +32,7 @@ public class Shop extends AppCompatActivity{
     public void upgradeWeapon(View v){
         attack=attack+1;
         gold=gold-cost.nextInt(990)+10;
+        System.out.println("you now have: " + getGold());
     }
 
     public void upgradeArmor(View v){
