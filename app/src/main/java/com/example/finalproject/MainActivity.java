@@ -2,6 +2,7 @@ package com.example.finalproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,7 +45,8 @@ public class MainActivity extends AppCompatActivity {
         canUpgrade();
     }
     public void onContinueClick(View v){
-
+        Intent intent = new Intent(this, InTown.class);
+        startActivity(intent);
     }
 
     public void addHealth(){
