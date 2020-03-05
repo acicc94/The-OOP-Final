@@ -1,4 +1,6 @@
 package com.example.finalproject;
 
-public class InTown {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class InTown extends AppCompatActivity {
 }

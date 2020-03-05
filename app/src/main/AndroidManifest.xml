@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Combat"/>
+        <activity android:name=".InTown"/>
         <activity android:name=".Outside"/>
         <activity android:name=".Shop"/>
     </application>
