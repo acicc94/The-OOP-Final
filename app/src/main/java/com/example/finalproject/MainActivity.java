@@ -32,13 +32,16 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onAddHealthClick(View v){
         addHealth();
+        canUpgrade();
 
     }
     public void onAddStrengthClick(View v){
         addAttack();
+        canUpgrade();
     }
     public void onAddSpeedClick(View v){
         addSpeed();
+        canUpgrade();
     }
     public void onContinueClick(View v){
 
@@ -55,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
     public void addSpeed(){
         stats.setSpeed(stats.getSpeed() + 1);
         stats.setAvailablePoint(-1);
+    }
+    public void canUpgrade(){
+        if(stats.getAvailablePoint() == 0){
+            buttonHp.setEnabled(false);
+            buttonAtk.setEnabled(false);
+            buttonSp.setEnabled(false);
+        }
     }
 
 
