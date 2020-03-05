@@ -1,5 +1,6 @@
 package com.example.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -35,10 +36,12 @@ public class Shop extends AppCompatActivity{
 
     private void upgradeArmor(){
 
+        gold=gold-cost.nextInt(990)+10;
     }
 
-    private void onLeaveShopClick(View v){
-
+    public void onLeaveShopClick(View v){
+        Intent intent = new Intent(this, InTown.class);
+        startActivity(intent);
     }
 
     private void goldCheck(){
