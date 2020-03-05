@@ -79,13 +79,4 @@ public class Shop extends AppCompatActivity{
     public void setShopEvent(TextView shopEvent) {
         this.shopEvent = shopEvent;
     }
-
-    @Override
-    public String toString() {
-        return "Shop{" +
-                "Player's gold is now : " + gold +
-                "\nPlayer's attack is now : " + attack +
-                "\nPlayer's defense is now : " + defense +
-                '}';
-    }
 }
