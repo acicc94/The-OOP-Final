@@ -8,7 +8,10 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 import static com.example.finalproject.Outside.nomOfEnemies;
-//import static com.example.finalproject.MainActivity.attack;
+import static com.example.finalproject.MainActivity.hp;
+import static com.example.finalproject.MainActivity.speed;
+import static com.example.finalproject.MainActivity.attack;
+import static com.example.finalproject.MainActivity.points;
 
 
 public class Combat extends AppCompatActivity{
@@ -17,15 +20,14 @@ public class Combat extends AppCompatActivity{
     Random random=new Random();
     private final int TEN=10;
     private int level = 1;
-    private int xp=0,currentHealth;
+    private int xp=0,currentHealth=hp;
     private Stats newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
     private Player player;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.combat);
-        player=new Player(100,10,10,1,"6");
-        currentHealth=player.getHealth();
+        player=new Player(hp,speed,attack,points,"");
         playerHealth=findViewById(R.id.playerhp);
         EnemyHp=findViewById(R.id.Enemyhp);
         attackBtn=findViewById(R.id.attackenemy);
@@ -42,10 +44,10 @@ public class Combat extends AppCompatActivity{
         xpCheck();
     }
     public void speedCheck(){
-        int PSC=random.nextInt(player.getSpeed())+1,ESC=random.nextInt(newEnemy.getSpeed())+1;
+        int PSC=random.nextInt(speed)+1,ESC=random.nextInt(newEnemy.getSpeed())+1;
 //        PSC=player speed Check ESC=enemy speed check
-        int playerDamage=player.getAttack(),enemyDamage=newEnemy.getAttack();
-        if (PSC==player.getSpeed()){
+        int playerDamage=attack,enemyDamage=newEnemy.getAttack();
+        if (PSC==speed){
             PSC*=2;
         }
         if (PSC>ESC){
