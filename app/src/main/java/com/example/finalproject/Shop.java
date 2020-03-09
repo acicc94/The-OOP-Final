@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import static com.example.finalproject.MainActivity.attack;
+import static com.example.finalproject.MainActivity.gold;
+
 import java.util.Random;
 
 public class Shop extends AppCompatActivity{
     private TextView shopEvent;
-
-    public int gold,defense;
 
     private Random cost = new Random();
 
@@ -30,13 +30,13 @@ public class Shop extends AppCompatActivity{
 
     public void upgradeWeapon(View v){
         attack++;
-        gold=gold-cost.nextInt(990)+10;
-        System.out.println("you now have: " + getGold());
+        gold=-cost.nextInt(990)+10;
+        System.out.println("you now have: " + gold);
     }
 
     public void upgradeArmor(View v){
 
-        gold=gold-cost.nextInt(990)+10;
+        gold=-cost.nextInt(990)+10;
     }
 
     public void onLeaveShopClick(View v){
@@ -46,22 +46,6 @@ public class Shop extends AppCompatActivity{
 
     private void goldCheck(){
 
-    }
-
-    public int getGold() {
-        return gold;
-    }
-
-    public void setGold(int gold) {
-        this.gold = gold;
-    }
-
-    public int getDefense() {
-        return defense;
-    }
-
-    public void setDefense(int defense) {
-        this.defense = defense;
     }
 
     public TextView getShopEvent() {
