@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         txtHealth.setText(stats.getHealth()+"");
         txtAttack.setText(stats.getAttack()+"");
         txtSpeed.setText(stats.getSpeed()+"");
+        txtXp.setText("100");
 
 
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         hp=+10;
         txtHealth.setText(hp+"");
         points--;
+        txtPoints.setText(points+"");
         canUpgrade();
 
     }
