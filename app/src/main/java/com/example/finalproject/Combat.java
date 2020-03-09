@@ -12,6 +12,7 @@ import static com.example.finalproject.MainActivity.hp;
 import static com.example.finalproject.MainActivity.speed;
 import static com.example.finalproject.MainActivity.attack;
 import static com.example.finalproject.MainActivity.points;
+import static com.example.finalproject.MainActivity.xp;
 
 
 public class Combat extends AppCompatActivity{
@@ -20,7 +21,6 @@ public class Combat extends AppCompatActivity{
     Random random=new Random();
     private final int TEN=10;
     private int level = 1,currentHealth=hp;
-    private int xp=0;
     private Stats newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
     private Player player;
     @Override
