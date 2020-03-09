@@ -60,14 +60,15 @@ public class Combat extends AppCompatActivity{
         updateHP();
     }
     public void xpCheck(){
-        if (xp==100){
+        if (xp>=100){
             player.setAvailablePoint(player.getAvailablePoint()+3);
-            xp=0;
+            xp-=100;
         }
     }
     private void deadCheck(){
         if (newEnemy.getHealth()<=0){
             xp+=10;
+            gold+=random.nextInt(501);
             if (nomOfEnemies!=1) {
                 newEnemy = new Stats(random.nextInt(TEN) + level, random.nextInt(TEN) + level, random.nextInt(TEN) + level, random.nextInt(TEN) + level);
                 log.append("the next enemy walks up"+"\n");
