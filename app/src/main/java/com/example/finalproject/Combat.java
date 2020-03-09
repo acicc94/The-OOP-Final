@@ -19,15 +19,15 @@ public class Combat extends AppCompatActivity{
     private Button attackBtn;
     Random random=new Random();
     private final int TEN=10;
-    private int level = 1;
-    private int xp=0,currentHealth=hp;
+    private int level = 1,currentHealth=hp;
+    private int xp=0;
     private Stats newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
     private Player player;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.combat);
-        player=new Player(hp,speed,attack,points,"");
+        player=new Player(hp,speed,attack,points,"name");
         playerHealth=findViewById(R.id.playerhp);
         EnemyHp=findViewById(R.id.Enemyhp);
         attackBtn=findViewById(R.id.attackenemy);
