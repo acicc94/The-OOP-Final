@@ -28,25 +28,29 @@ public class MainActivity extends AppCompatActivity {
         buttonHp = findViewById(R.id.HPadd);
         buttonAtk = findViewById(R.id.Attackadd);
         buttonSp = findViewById(R.id.Speedadd);
+        txtHealth.setText(stats.getHealth()+"");
+        txtAttack.setText(stats.getAttack()+"");
+        txtSpeed.setText(stats.getSpeed()+"");
+
 
 
     }
     public void onAddHealthClick(View v){
         stats.setHealth(stats.getHealth() + 10);
-        txtHealth.setText(stats.getHealth());
+        txtHealth.setText(stats.getHealth()+"");
         stats.setAvailablePoint(-1);
         canUpgrade();
 
     }
     public void onAddStrengthClick(View v){
         stats.setAttack(stats.getAttack()+ 1);
-        txtAttack.setText(stats.getAttack());
+        txtAttack.setText(stats.getAttack()+"");
         stats.setAvailablePoint(-1);
         canUpgrade();
     }
     public void onAddSpeedClick(View v){
         stats.setSpeed(stats.getSpeed() + 1);
-        txtSpeed.setText(stats.getSpeed());
+        txtSpeed.setText(stats.getSpeed()+"");
         stats.setAvailablePoint(-1);
         canUpgrade();
     }
