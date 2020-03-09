@@ -32,16 +32,22 @@ public class MainActivity extends AppCompatActivity {
 
     }
     public void onAddHealthClick(View v){
-        addHealth();
+        stats.setHealth(stats.getHealth() + 10);
+        txtHealth.setText(stats.getHealth());
+        stats.setAvailablePoint(-1);
         canUpgrade();
 
     }
     public void onAddStrengthClick(View v){
-        addAttack();
+        stats.setAttack(stats.getAttack()+ 1);
+        txtAttack.setText(stats.getAttack());
+        stats.setAvailablePoint(-1);
         canUpgrade();
     }
     public void onAddSpeedClick(View v){
-        addSpeed();
+        stats.setSpeed(stats.getSpeed() + 1);
+        txtSpeed.setText(stats.getSpeed());
+        stats.setAvailablePoint(-1);
         canUpgrade();
     }
     public void onContinueClick(View v){
@@ -49,18 +55,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void addHealth(){
-        stats.setHealth(stats.getHealth() + 10);
-        stats.setAvailablePoint(-1);
-    }
-    public void addAttack(){
-        stats.setAttack(stats.getAttack()+ 1);
-        stats.setAvailablePoint(-1);
-    }
-    public void addSpeed(){
-        stats.setSpeed(stats.getSpeed() + 1);
-        stats.setAvailablePoint(-1);
-    }
+
+
+
     public void canUpgrade(){
         if(stats.getAvailablePoint() == 0){
             buttonHp.setEnabled(false);
