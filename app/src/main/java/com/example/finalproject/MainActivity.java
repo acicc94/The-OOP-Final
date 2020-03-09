@@ -39,22 +39,16 @@ public class MainActivity extends AppCompatActivity {
     public void onAddHealthClick(View v){
         hp=+10;
         txtHealth.setText(hp+"");
-        points--;
-        txtPoints.setText(points+"");
         canUpgrade();
 
     }
     public void onAddStrengthClick(View v){
         attack++;
-        txtAttack.setText(attack+"");
-        points--;
         canUpgrade();
     }
     public void onAddSpeedClick(View v){
         speed++;
-        txtSpeed.setText(speed+"");
-        points--;
-        canUpgrade();
+       canUpgrade();
     }
     public void onContinueClick(View v){
     Intent intent = new Intent(this, InTown.class);
@@ -65,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void canUpgrade(){
+        points--;
+        txtPoints.setText(points+"");
         if(stats.getAvailablePoint() == 0){
             buttonHp.setEnabled(false);
             buttonAtk.setEnabled(false);
