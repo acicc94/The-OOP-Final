@@ -4,15 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
+import static com.example.finalproject.MainActivity.attack;
 import java.util.Random;
 
 public class Shop extends AppCompatActivity{
     private TextView shopEvent;
 
-    public int gold,attack,defense;
+    public int gold,defense;
 
     private Random cost = new Random();
 
@@ -55,14 +54,6 @@ public class Shop extends AppCompatActivity{
 
     public void setGold(int gold) {
         this.gold = gold;
-    }
-
-    public int getAttack() {
-        return attack;
-    }
-
-    public void setAttack(int attack) {
-        this.attack = attack;
     }
 
     public int getDefense() {
