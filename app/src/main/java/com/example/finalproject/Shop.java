@@ -19,7 +19,7 @@ public class Shop extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.outside);
+        setContentView(R.layout.shop);
         shopEvent =findViewById(R.id.showevent);
     }
 
