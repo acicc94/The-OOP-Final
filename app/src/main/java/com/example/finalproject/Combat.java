@@ -8,11 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Random;
 import static com.example.finalproject.Outside.nomOfEnemies;
-import static com.example.finalproject.MainActivity.hp;
-import static com.example.finalproject.MainActivity.speed;
-import static com.example.finalproject.MainActivity.attack;
-import static com.example.finalproject.MainActivity.points;
-import static com.example.finalproject.MainActivity.xp;
+import static com.example.finalproject.MainActivity.*;
 
 
 public class Combat extends AppCompatActivity{
@@ -46,7 +42,7 @@ public class Combat extends AppCompatActivity{
     public void speedCheck(){
         int PSC=random.nextInt(speed)+1,ESC=random.nextInt(newEnemy.getSpeed())+1;
 //        PSC=player speed Check ESC=enemy speed check
-        int playerDamage=attack,enemyDamage=newEnemy.getAttack();
+        int playerDamage=attack,enemyDamage=newEnemy.getAttack()-defense;
         if (PSC==speed){
             PSC*=2;
         }
