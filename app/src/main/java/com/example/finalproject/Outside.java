@@ -12,6 +12,7 @@ public class Outside extends AppCompatActivity{
     Random random=new Random();
     private Enemy enemy=new Enemy();
     public String enemyName;
+    public static int nomOfEnemies;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -20,10 +21,11 @@ public class Outside extends AppCompatActivity{
     }
     public void search(View v) {
         enemyName=enemy.NewEnemy();
-        int nomOfEnemies = random.nextInt(5) + 1,eventNum=random.nextInt(5);
+        int eventNum=random.nextInt(5);
+        nomOfEnemies = random.nextInt(5) + 1;
         String event;
         if (eventNum==0){
-            event="you found "+nomOfEnemies+enemyName;
+            event="you found "+nomOfEnemies+" "+enemyName;
             showevent.setText(event);
         }else {
             event="nothing happened";

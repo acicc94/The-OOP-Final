@@ -19,9 +19,9 @@ public class Stats {
     }
 
     public void setHealth(int health) {
-        if(health <= 0){
-            throw new IllegalArgumentException("Health cant be 0 or less. ");
-        }
+//        if(health <= 0){
+//            throw new IllegalArgumentException("Health cant be 0 or less. ");
+//        }
         this.health = health;
     }
 
