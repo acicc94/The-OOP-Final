@@ -3,6 +3,7 @@ package com.example.finalproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import static com.example.finalproject.MainActivity.*;
@@ -11,7 +12,8 @@ import java.util.Random;
 
 public class Shop extends AppCompatActivity{
     private TextView shopEvent,goldamount;
-
+    private Button armor,weapon;
+    private int costAmount;
     private Random cost = new Random();
 
     @Override
@@ -20,7 +22,10 @@ public class Shop extends AppCompatActivity{
         setContentView(R.layout.shop);
         shopEvent =findViewById(R.id.showevent);
         goldamount=findViewById(R.id.goldamount);
+        armor=findViewById(R.id.button2);
+        weapon=findViewById(R.id.button8);
         goldamount.setText("you have "+gold);
+        goldCheck(500);
     }
 
     public void shopTalk(View v){
@@ -31,14 +36,18 @@ public class Shop extends AppCompatActivity{
 
     public void upgradeWeapon(View v){
         attack++;
-        gold=-(cost.nextInt(attack)*50+cost.nextInt(level)*10);
+        costAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10);
+        gold-=costAmount;
         goldamount.setText("you have "+gold);
+        goldCheck(costAmount);
     }
 
     public void upgradeArmor(View v){
         defense++;
-        gold=-(cost.nextInt(defense)*50+cost.nextInt(level)*10);
+        costAmount=(cost.nextInt(defense)*50+cost.nextInt(level)*10);
+        gold-=costAmount;
         goldamount.setText("you have "+gold);
+        goldCheck(costAmount);
     }
 
     public void onLeaveShopClick(View v){
@@ -46,8 +55,11 @@ public class Shop extends AppCompatActivity{
         startActivity(intent);
     }
 
-    private void goldCheck(){
-
+    private void goldCheck(int num){
+        if (gold<num){
+            armor.setEnabled(false);
+            weapon.setEnabled(false);
+        }
     }
 
     public TextView getShopEvent() {
