@@ -61,6 +61,7 @@ public class Combat extends AppCompatActivity{
     public void xpCheck(){
         if (xp>=100){
             points+=3;
+            level++;
             xp-=100;
         }
     }
