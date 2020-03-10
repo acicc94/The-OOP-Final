@@ -31,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         txtHealth.setText(stats.getHealth()+"");
         txtAttack.setText(stats.getAttack()+"");
         txtSpeed.setText(stats.getSpeed()+"");
-        txtXp.setText(xp+"/100");
-
+        txtXp.setText(xp+"/100 xp");
+        txtPoints.setText(points+"");
 
 
     }
     public void onAddHealthClick(View v){
-        hp=+10;
+        hp += 10;
         txtHealth.setText(hp+"");
         canUpgrade();
 
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     public void canUpgrade(){
         points--;
         txtPoints.setText(points+"");
-        if(stats.getAvailablePoint() == 0){
+        if(points == 0){
             buttonHp.setEnabled(false);
             buttonAtk.setEnabled(false);
             buttonSp.setEnabled(false);
