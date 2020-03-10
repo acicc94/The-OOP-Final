@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
+import static com.example.finalproject.MainActivity.*;
 
 public class InTown extends AppCompatActivity {
     @Override
@@ -19,5 +20,8 @@ public class InTown extends AppCompatActivity {
     public void onHeadOutClick(View v){
         Intent intent = new Intent(this, Outside.class);
         startActivity(intent);
+    }
+    public void onRestClick(View v){
+        currentHealth=hp;
     }
 }
