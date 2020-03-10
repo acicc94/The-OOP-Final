@@ -21,7 +21,7 @@ public class Outside extends AppCompatActivity{
     }
     public void search(View v) {
         enemyName=enemy.NewEnemy();
-        int eventNum=random.nextInt(5);
+        int eventNum=random.nextInt(2);
         nomOfEnemies = random.nextInt(5) + 1;
         String event;
         if (eventNum==0){

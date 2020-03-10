@@ -12,7 +12,10 @@ public class InTown extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.intown);
     }
-
+    public void onPlayerClick(View v){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
     public void onHeadToShopClick(View v){
         Intent intent = new Intent(this, Shop.class);
         startActivity(intent);

@@ -60,7 +60,7 @@ public class Combat extends AppCompatActivity{
     }
     public void xpCheck(){
         if (xp>=100){
-            player.setAvailablePoint(player.getAvailablePoint()+3);
+            points+=3;
             xp-=100;
         }
     }
