@@ -16,7 +16,6 @@ public class Combat extends AppCompatActivity{
     private Button attackBtn;
     Random random=new Random();
     private final int TEN=10;
-    private int currentHealth=hp;
     private Stats newEnemy=new Stats(random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level,random.nextInt(TEN)+level);
     private Player player;
     @Override
@@ -61,7 +60,7 @@ public class Combat extends AppCompatActivity{
     }
     public void xpCheck(){
         if (xp>=100){
-            player.setAvailablePoint(player.getAvailablePoint()+3);
+            points+=3;
             xp-=100;
         }
     }

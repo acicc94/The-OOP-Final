@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtName, txtPoints, txtXp, txtHealth,txtAttack,txtSpeed;
-    static int hp = 10, speed = 5,attack = 5,points = 10,xp=0,gold,defense,level = 1;
+    static int hp = 10, speed = 5,attack = 5,points = 10,xp=0,gold,defense,level = 1,currentHealth=hp;
     private Button buttonHp,buttonAtk,buttonSp;
     private Stats stats=new Stats(hp, speed, attack, points);
 
@@ -31,13 +31,14 @@ public class MainActivity extends AppCompatActivity {
         txtHealth.setText(stats.getHealth()+"");
         txtAttack.setText(stats.getAttack()+"");
         txtSpeed.setText(stats.getSpeed()+"");
-        txtXp.setText(xp+"/100");
-
+        txtXp.setText(xp+"/100 xp");
+        txtPoints.setText(points+"");
 
 
     }
     public void onAddHealthClick(View v){
-        hp=+10;
+        hp += 10;
+        currentHealth=hp;
         txtHealth.setText(hp+"");
         canUpgrade();
 
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     public void canUpgrade(){
         points--;
         txtPoints.setText(points+"");
-        if(stats.getAvailablePoint() == 0){
+        if(points == 0){
             buttonHp.setEnabled(false);
             buttonAtk.setEnabled(false);
             buttonSp.setEnabled(false);
