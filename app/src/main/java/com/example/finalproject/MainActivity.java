@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onAddStrengthClick(View v){
         attack++;
-        txtAttack.setText(hp+"");
+        txtAttack.setText(attack+"");
         canUpgrade();
     }
     public void onAddSpeedClick(View v){
         speed++;
-        txtSpeed.setText(hp+"");
+        txtSpeed.setText(speed+"");
        canUpgrade();
     }
     public void onContinueClick(View v){
