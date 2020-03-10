@@ -13,8 +13,8 @@ import java.util.Random;
 public class Shop extends AppCompatActivity{
     private TextView shopEvent,goldamount;
     private Button armor,weapon;
-    private int costAmount;
     private Random cost = new Random();
+    private int weaponAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10),armorAmount=(cost.nextInt(defense)*50+cost.nextInt(level)*10);
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -25,7 +25,8 @@ public class Shop extends AppCompatActivity{
         armor=findViewById(R.id.button2);
         weapon=findViewById(R.id.button8);
         goldamount.setText("you have "+gold);
-        goldCheck(500);
+        goldCheck(weaponAmount);
+        goldCheck(armorAmount);
     }
 
     public void shopTalk(View v){
@@ -36,18 +37,16 @@ public class Shop extends AppCompatActivity{
 
     public void upgradeWeapon(View v){
         attack++;
-        costAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10);
-        gold-=costAmount;
+        gold-=weaponAmount;
         goldamount.setText("you have "+gold);
-        goldCheck(costAmount);
+        goldCheck(weaponAmount);
     }
 
     public void upgradeArmor(View v){
         defense++;
-        costAmount=(cost.nextInt(defense)*50+cost.nextInt(level)*10);
-        gold-=costAmount;
+        gold-=armorAmount;
         goldamount.setText("you have "+gold);
-        goldCheck(costAmount);
+        goldCheck(armorAmount);
     }
 
     public void onLeaveShopClick(View v){
@@ -59,6 +58,9 @@ public class Shop extends AppCompatActivity{
         if (gold<num){
             armor.setEnabled(false);
             weapon.setEnabled(false);
+        }else {
+            armor.setEnabled(true);
+            weapon.setEnabled(true);
         }
     }
 
