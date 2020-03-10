@@ -14,7 +14,7 @@ public class Shop extends AppCompatActivity{
     private TextView shopEvent,goldamount;
     private Button armor,weapon;
     private Random cost = new Random();
-    private int weaponAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10),armorAmount=(cost.nextInt(defense)*50+cost.nextInt(level)*10);
+    private int weaponAmount,armorAmount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -25,6 +25,8 @@ public class Shop extends AppCompatActivity{
         armor=findViewById(R.id.button2);
         weapon=findViewById(R.id.button8);
         goldamount.setText("you have "+gold);
+        weaponAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10);
+        armorAmount=(cost.nextInt(defense+1)*50+cost.nextInt(level)*10);
         goldCheck(weaponAmount);
         goldCheck(armorAmount);
     }
