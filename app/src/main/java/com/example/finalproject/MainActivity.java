@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtName, txtPoints, txtXp, txtHealth,txtAttack,txtSpeed;
-    static int hp = 10, speed = 5,attack = 5,points = 10,xp=0,gold,defense;
+    static int hp = 10, speed = 5,attack = 5,points = 10,xp=0,gold,defense,level = 1;
     private Button buttonHp,buttonAtk,buttonSp;
     private Stats stats=new Stats(hp, speed, attack, points);
 
