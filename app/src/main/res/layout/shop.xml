@@ -64,8 +64,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/goldamount"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="(gold in here)"
         app:layout_constraintBottom_toBottomOf="parent"

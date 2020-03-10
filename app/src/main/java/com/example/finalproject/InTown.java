@@ -3,7 +3,6 @@ package com.example.finalproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class InTown extends AppCompatActivity {
