@@ -79,8 +79,9 @@ public class Combat extends AppCompatActivity{
                 attackBtn.setEnabled(false);
             }
         }
-        if (player.getHealth()<=0){
+        if (currentHealth<=0){
             attackBtn.setEnabled(false);
+            log.append("you are defeated");
         }
     }
     private void updateHP(){

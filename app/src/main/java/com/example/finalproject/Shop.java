@@ -27,17 +27,18 @@ public class Shop extends AppCompatActivity{
         armor=findViewById(R.id.button2);
         weapon=findViewById(R.id.button8);
         goldAmount.setText("you have "+gold);
-        weaponAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10);
-        armorAmount=(cost.nextInt(defense+1)*50+cost.nextInt(level)*10);
+        weaponAmount=(cost.nextInt(attack)*50+cost.nextInt(level)*10)+1;
+        armorAmount=(cost.nextInt(defense+1)*50+cost.nextInt(level)*10)+1;
         goldCheck(weaponAmount);
         goldCheck(armorAmount);
         weaponCost.setText("weapon cost "+weaponAmount);
         armorCost.setText("armor cost "+armorAmount);
+        shopEvent.setText("you are greeted by a woman behind a oak wood counter.");
     }
 
     public void shopTalk(View v){
         if (shopEvent.getText()=="you are greeted by a woman behind a oak wood counter."){
-            shopEvent.setText("she asks you to hurry up and buy something");
+            shopEvent.append("\nshe asks you to hurry up and buy something");
         }
     }
 
